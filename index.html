@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: helvetica;
+      text-decoration: none;
+      list-style: none;
+    }
+    body{
+      background: #001e4d;
+      transition: all .4s ease !important;
+    }
+    .app{
+      background: #fff;
+      width: 90%;
+      max-width: 600px;
+      margin: 100px auto 0;
+      border-radius: 10px;
+      padding: 30px;
+    }
+    .app h1{
+      font-size: 25px;
+      color: #001e4d;
+      font-weight: 600;
+      border-bottom: 1px solid #333;
+      padding-bottom: 30px;
+    }
+    .quiz{
+      padding: 20px 0;
+    }
+    .quiz h2{
+      font-size: 1.3rem;
+      color: #001e4d;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      text-align: right;
+      direction: rtl;
+    }
+    .btn{
+      background: #fff;
+      color: #001e4d;
+      font-weight: 500;
+      font-size: 1.1rem;
+      width: 100%;
+      border: 1px solid #222;
+      padding: 10px;
+      margin: 10px 0;
+      text-align: right;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all .3s ease;
+    }
+    .btn:hover:not([disabled]){
+      background: #333;
+      color: #fff;
+    }
+    .btn:disabled{
+      cursor: no-drop;
+    }
+    #next-btn{
+      background: #001e4d;
+      color: #fff;
+      font-weight: 500;
+      font-size: 1rem;
+      width: 150px;
+      border: none;
+      padding: 10px;
+      margin: 20px auto 0;
+      border-radius: 4px;
+      cursor: pointer;
+      display: none;
+    }
+    .correct{
+      background: #51d68a;
+      border: transparent;
+    }
+    .incorrect{
+      background: #fb5858;
+    }
+    .me{
+      font-weight: bolder;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <h1>Simple Quiz</h1>
+    <div class="quiz">
+      <h2 id="question"></h2>
+      <div id="answer-buttons">
+        <button class="btn"></button>
+        <button class="btn"></button>
+        <button class="btn"></button>
+        <button class="btn"></button>
+      </div>
+      <button id="next-btn"></button>
+    </div>
+    <p class="me">- NN-Bayat</p>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
